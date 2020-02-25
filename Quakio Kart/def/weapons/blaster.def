@@ -80,12 +80,12 @@ entityDef weapon_blaster
 	// Firing properties
 	"chargeTime"				".8"
 	"chargeDelay"				".1"
-	"chargeGlow"				"0 .4"
+	"chargeGlow"				".4 .4"
 	"fireRate"					".15"
-	"spread"					".2"
+	"spread"					"0"
 
-//	"def_projectile"			"projectile_blaster"
-	"def_hitscan"				"hitscan_blaster"
+	"def_projectile"			"projectile_blaster"
+//	"def_hitscan"				"hitscan_blaster"
 	"def_altprojectile"			"projectile_blaster_charged"
 	"ammoType"					"ammo_blaster"
 	"clipSize"					"0"
@@ -252,20 +252,22 @@ entityDef hitscan_blaster
 entityDef projectile_blaster
 {
 	"spawnclass"				"idProjectile"
-	"mins"						"-2 -2 -2"
-	"maxs"						"2 2 2"
+	"mins"						"-8 -8 -8"
+	"maxs"						"8 8 8"
 	"cone"						"2"
 	"noshadows"					"1"
 																
 	"def_damage"				"damage_blaster"
 								
-	"velocity"					"1500 0 0"
-	"fuse"						"100"
+	"velocity"					"300 0 0"
+	"fuse"						"50"
 	"push"						"7500"
 								
-	"detonate_on_fuse"			"0"
+	"bounce"					"1"
+
+	"detonate_on_fuse"			"1"
 	"detonate_on_death"			"0"
-	"detonate_on_world"			"1"
+	"detonate_on_world"			"0"
 	"detonate_on_actor"			"1"
 								
 	"impact_gib"				"1"
@@ -273,7 +275,7 @@ entityDef projectile_blaster
 	"decal_bounce"				""
 	"decal_size"				"8"
 								
-	"fx_fly"					"effects/weapons/blaster/fly.fx"
+	"fx_fly"					"effects/weapons/blaster/charged/fly.fx"
 	"fx_impact"					"effects/weapons/blaster/impact_default.fx"
 	"fx_impact_water"			"effects/ambient/splash_smll.fx"
 	"fx_impact_flesh"			"effects/weapons/blaster/impact_flesh.fx"
@@ -289,10 +291,7 @@ entityDef projectile_blaster_charged
 {
 	"inherit"					"projectile_blaster"
 
-	"mins"						"-8 -8 -8"
-	"maxs"						"8 8 8"
 
-	"velocity"					"100 0 0"
 
 	"fx_fly"					"effects/weapons/blaster/charged/fly.fx"
 	"fx_impact"					"effects/weapons/blaster/charged/impact_default.fx"
@@ -313,7 +312,7 @@ entityDef projectile_blaster_charged
 entityDef damage_blaster
 {
 	"inherit"					"damage_bullet"
-	"damage"					"8"
+	"damage"					"20"
 
 	"fx_wound"					"effects/wounds/energy.fx"
 
@@ -325,14 +324,14 @@ entityDef damage_blaster
 entityDef damage_blaster_charged
 {
 	"inherit"					"damage_blaster"
-	"damage"					"50"
+	"damage"					"20"
 }
 
 entityDef damage_blastersplash_charged
 {
 	"inherit"					"damage_blaster"
 	
-	"damage"					"40"
+	"damage"					"0"
 	"radius"					"50"
 	"knockback"					"30"
 	"push"						"2500"
