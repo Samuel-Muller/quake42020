@@ -8745,7 +8745,7 @@ void idPlayer::AdjustSpeed( void ) {
 		speed = pm_noclipspeed.GetFloat();
 		bobFrac = 0.0f;
  	} else if ( !physicsObj.OnLadder() && ( usercmd.buttons & BUTTON_RUN ) && ( usercmd.forwardmove || usercmd.rightmove ) && ( usercmd.upmove >= 0 ) ) {
-		bobFrac = 1.0f;
+		bobFrac = 0.0f;
 		speed = pm_speed.GetFloat();
 	} else {
 		speed = pm_walkspeed.GetFloat();
