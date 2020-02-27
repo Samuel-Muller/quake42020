@@ -1005,6 +1005,10 @@ private:
 
 	const idDeclEntityDef*	itemCosts;
 
+	float					velocityForAcceleration = 0.0f;
+
+
+
 	bool					WantSmoothing( void ) const;
 	void					PredictionErrorDecay( void );
 

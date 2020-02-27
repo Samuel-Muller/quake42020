@@ -8746,7 +8746,8 @@ void idPlayer::AdjustSpeed( void ) {
 		bobFrac = 0.0f;
  	} else if ( !physicsObj.OnLadder() && ( usercmd.buttons & BUTTON_RUN ) && ( usercmd.forwardmove || usercmd.rightmove ) && ( usercmd.upmove >= 0 ) ) {
 		bobFrac = 0.0f;
-		speed = pm_speed.GetFloat();
+		//speed = pm_speed.GetFloat();
+		speed = velocityForAcceleration;
 	} else {
 		speed = pm_walkspeed.GetFloat();
 		bobFrac = 0.0f;
@@ -9643,6 +9644,18 @@ void idPlayer::Think( void ) {
 		inBuyZone = false;
 
 	inBuyZonePrev = false;
+
+	if (!physicsObj.OnLadder() && (usercmd.buttons & BUTTON_RUN) && (usercmd.forwardmove || usercmd.rightmove) && (usercmd.upmove >= 0)) {
+		if (velocityForAcceleration < pm_speed.GetFloat()) {
+			velocityForAcceleration += 0.8f;
+		}
+	}
+	else if (velocityForAcceleration > pm_speed.GetFloat() / 2.0f) {	//player should be able to release the button for a bit if they were going fast and keep going
+		velocityForAcceleration -= 2.4f;
+	}
+	else {
+		velocityForAcceleration = 0.0f;									//if they stopped for a while, they should have to accelerate again
+	}
 }
 
 /*
