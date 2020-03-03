@@ -78,13 +78,13 @@ entityDef weapon_grenadelauncher
 	"spread"					"0"
 	
 	// the direction of projectile launches will be modified by this
-	"dirOffset"					"0 0 .2"
+	"dirOffset"					"0 0 .8"
 	
 	"inv_weapon"				"weapon_grenadelauncher"
 	"inv_start_ammo_grenadelauncher"	"10"
 	"inv_item"					"1"
 	"inv_icon"					"gfx/guis/hud/icons/item_grenade.tga"
-	"inv_name"					"#str_107403"	
+	"inv_name"					"Bob-omb"	
 
 	"weaponname"				"Grenade Launcher"
 	"def_projectile"			"projectile_grenade"
@@ -240,11 +240,11 @@ entityDef projectile_grenade
 	
 	"no_contents"				"0"
 								
-	"model"						"models/weapons/grenadelauncher/w_grenade.lwo"
+	"model"						"models/gibs/brain_pork1.lwo"
 	"def_damage"				"damage_grenadeDirect"
 	"def_splash_damage"			"damage_grenadeSplash"
 																											
-	"speed"						"700"
+	"speed"						"800"
 	"angular_velocity"			"-10 5 1"
 	"settle_duration"			"0.08"
 	
@@ -255,9 +255,9 @@ entityDef projectile_grenade
 	"gravity"					"1"
 	"fuse"						"2.5"
 								
-	"detonate_on_fuse"			"1"
+	"detonate_on_fuse"			"0"
 	"detonate_on_death"			"0"
-	"detonate_on_world"			"0"
+	"detonate_on_world"			"1"
 	"detonate_on_actor"			"1"
 	"detonateTestGroundMaterial"	"1"
 								
