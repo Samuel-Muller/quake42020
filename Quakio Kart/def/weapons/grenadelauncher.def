@@ -272,11 +272,11 @@ entityDef projectile_grenade
 	"fx_fly_mp"				"effects/weapons/grenadelauncher/trail_mp.fx"
 	"fx_detonate"				"effects/weapons/grenadelauncher/detonate.fx"
 	"fx_detonate_mp"			"effects/weapons/rocketlauncher/detonate_mp.fx"
-	"fx_impact"				"effects/weapons/grenadelauncher/impact.fx"
+	"fx_impact"				"effects/weapons/grenadelauncher/detonate.fx"
 	"fx_impact_mp"				"effects/weapons/rocketlauncher/impact_mp.fx"
-	"fx_impact_concrete"			"effects/weapons/grenadelauncher/impact_concrete.fx"
+	"fx_impact_concrete"			"effects/weapons/grenadelauncher/detonate.fx"
 	"fx_impact_concrete_mp"			"effects/weapons/rocketlauncher/impact_mp.fx"
-	"fx_impact_rock"			"effects/weapons/grenadelauncher/impact_concrete.fx"
+	"fx_impact_rock"			"effects/weapons/grenadelauncher/detonate.fx"
 	"fx_impact_rock_mp"			"effects/weapons/rocketlauncher/impact_mp.fx"
 	"fx_impact_water"			"effects/ambient/splash_med.fx"
 
@@ -318,7 +318,7 @@ entityDef damage_grenadeDirect_mp
 entityDef damage_grenadeSplash 
 {
 	"damage"					"200"
-	"radius"					"250"
+	"radius"					"400"
 	"knockback"					"100"
 	"push"						"10000"
 	"gib"						"0"
