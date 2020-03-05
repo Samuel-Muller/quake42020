@@ -71,12 +71,12 @@ entityDef weapon_napalmgun
 	"inv_start_ammo_napalmgun"	"10"
 	"inv_item"					"1"
 	"inv_icon"					"gfx/guis/hud/icons/item_fire.tga"
-	"inv_name"					"Napalm Launcher"	
+	"inv_name"					"Fire Flower"	
 
-	"fireRate"					".8"
+	"fireRate"					".1"
 //	"reloadRate"				".1"
 	"spread"					"0"
-	"dirOffset"					"0 0 .1"
+	"dirOffset"					"0 0 .4"
 
 	"weaponname"				"Napalm Launcher"
 	"def_projectile"			"projectile_napalm"
@@ -260,20 +260,20 @@ entityDef projectile_napalm
 	"def_damage"				"damage_napalmDirect"
 	"def_splash_damage"			"damage_napalmSplash"	
 
-	"speed"						"1200"
+	"speed"						"800"
 	"angular_velocity"			"-10 5 1"
 	"settle_duration"			"0.08"
 	
 	"linear_friction"			"0"
 	"angular_friction"			"0"
 	"contact_friction"			"10"
-	//"bounce"					".65"
+	"bounce"					".95"
 	"gravity"					"1.2"
-	"fuse"						"2.5"
+	"fuse"						"3.5"
 								
 	"detonate_on_fuse"			"1"
 	"detonate_on_death"			"0"
-	"detonate_on_world"			"1"
+	"detonate_on_world"			"0"
 	"detonate_on_actor"			"1"
 								
 	"impact_gib"				"1"
@@ -305,7 +305,7 @@ entityDef projectile_napalm
 
 	//spawn impact entity information
 	"def_impactEntity"			"impact_napalm_projectile"
-	"numImpactEntities"			"1"
+	"numImpactEntities"			"0"
 	"ieMinPitch"				"20"
 	"ieMaxPitch"				"50"
 	"ieSlicePercentage"			"1.00"
