@@ -3903,13 +3903,13 @@ void idPlayer::UpdateConditions( void ) {
 		sidespeed		= velocity * viewAxis[ 1 ];
 		pfl.forward		= pfl.onGround && ( forwardspeed > 20.01f );
 		pfl.backward	= pfl.onGround && ( forwardspeed < -20.01f );
-		pfl.strafeLeft	= pfl.onGround && ( sidespeed > 20.01f );
-		pfl.strafeRight	= pfl.onGround && ( sidespeed < -20.01f );
+		pfl.strafeLeft	= false;
+		pfl.strafeRight	= false;
  	} else if ( xyspeed > MIN_BOB_SPEED ) {
 		pfl.forward		= pfl.onGround && ( usercmd.forwardmove > 0 );
 		pfl.backward	= pfl.onGround && ( usercmd.forwardmove < 0 );
-		pfl.strafeLeft	= pfl.onGround && ( usercmd.rightmove < 0 );
-		pfl.strafeRight	= pfl.onGround && ( usercmd.rightmove > 0 );
+		pfl.strafeLeft	= false;
+		pfl.strafeRight	= false;
  	} else {
  		pfl.forward		= false;
  		pfl.backward	= false;
@@ -8966,7 +8966,7 @@ void idPlayer::Move( void ) {
 
 	// set physics variables
 	physicsObj.SetMaxStepHeight( pm_stepsize.GetFloat() );
-	physicsObj.SetMaxJumpHeight( pm_jumpheight.GetFloat() );
+	physicsObj.SetMaxJumpHeight( 0 );
 
 	if ( noclip ) {
 		physicsObj.SetContents( 0 );
@@ -9045,7 +9045,7 @@ void idPlayer::Move( void ) {
 		pfl.crouch	= physicsObj.IsCrouching();
 		pfl.onGround	= physicsObj.HasGroundContacts();
 		pfl.onLadder	= physicsObj.OnLadder();
-		pfl.jump		= physicsObj.HasJumped();
+		pfl.jump		= false;
 
  		// check if we're standing on top of a monster and give a push if we are
  		idEntity *groundEnt = physicsObj.GetGroundEntity();
