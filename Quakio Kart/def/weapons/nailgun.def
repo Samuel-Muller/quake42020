@@ -111,12 +111,13 @@ entityDef weapon_nailgun
 	"spread_mp"					"0"
 	"spreadSeek"				"5"
 	"drumSpeed"					".8"
+	"dirOffset"					"0 0 .8"
 	
 	"inv_weapon"				"weapon_nailgun"
 	"inv_start_ammo_nailgun"			"50"
 	"inv_item"					"1"
-	"inv_icon"					"gfx/guis/hud/icons/item_nailgun"
-	"inv_name"					"#str_107407"
+	"inv_icon"					"gfx/guis/hud/icons/fakeitem"
+	"inv_name"					"Fake Item Box"
 
 	"gui"						"guis/weapons/nailgun_ammo.gui"
 	"gui_zoom"					"guis/weapons/nailgun_scope.gui"
@@ -414,20 +415,21 @@ entityDef projectile_nail
 	"noshadows"					"1"
 	"clipmask_largeshot"		"0"
 								
-	"model"						"models/weapons/nailgun/nail.ase"
+	"model"						"models/items/ammo/ammo_box.lwo"
+	"skin"						"models/items/ammo/ammo_box_rocket_d"
 	"def_damage"				"damage_nailDirect"
 	"def_splash_damage"			"damage_nailSplash"
 																											
 	"health"					"0"
-	"speed"						"1200"
-	"gravity"					"0"
-	"fuse"						"4"
+	"speed"						"700"
+	"gravity"					"1"
+	"fuse"						"200"
 								
 	"detonate_on_fuse"			"1"
 	"detonate_on_death"			"0"
-	"detonate_on_world"			"1"
+	"detonate_on_world"			"0"
 	"detonate_on_actor"			"1"
-	"detonate_on_bounce"		"1"
+	"detonate_on_bounce"		"0"
 																
 	"decal_size"				"8"
 
