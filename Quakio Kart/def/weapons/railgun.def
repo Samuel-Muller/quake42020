@@ -90,8 +90,8 @@ entityDef weapon_railgun
 	"inv_weapon"				"weapon_railgun"
 	"inv_start_ammo_railgun"		"10"
 	"inv_item"				"1"
-	"inv_icon"				"gfx/guis/hud/icons/item_railgun"
-	"inv_name"				"#str_107408"
+	"inv_icon"				"gfx/guis/hud/icons/mushroom"
+	"inv_name"				"Mushroom"
 	
 	"def_hitscan"				"hitscan_railgun"	
 	"mtr_crosshair"				"gfx/guis/crosshairs/crosshair_railgun"
@@ -348,9 +348,9 @@ entityDef weaponmod_railgun_penetrate
 
 entityDef hitscan_railgun
 {
-	"range"						"40000"
+	"range"						"1"
 
-	"push"						"40000"
+	"push"						"1"
 	
 	"def_damage"				"damage_railgun"
 		
@@ -433,9 +433,9 @@ entityDef hitscan_railgun_penetrate
 
 entityDef damage_railgun 
 {
-	"damage"					"125"
-	"push"						"500"
-	"knockback"					"100"
+	"damage"					"1"
+	"push"						"1"
+	"knockback"					"1"
 	"gib"						"1"
 
 	"dv_time"					"500"
