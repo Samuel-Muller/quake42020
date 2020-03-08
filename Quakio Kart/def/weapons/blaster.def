@@ -88,8 +88,8 @@ entityDef weapon_blaster
 //	"def_hitscan"				"hitscan_blaster"
 	"def_altprojectile"			"projectile_blaster_charged"
 	"ammoType"					"ammo_blaster"
-	"clipSize"					"0"
-	"ammoRequired"				"0"
+	"clipSize"					"1"
+	"ammoRequired"				"1"
 //	"launchFromBarrel"			"1"
 
 	"inv_weapon"				"weapon_blaster"
