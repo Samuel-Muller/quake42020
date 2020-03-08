@@ -72,8 +72,8 @@ entityDef weapon_rocketlauncher
 	"inv_weapon"				"weapon_rocketlauncher"
 	"inv_start_ammo_rocketlauncher"	"10"
 	"inv_item"					"1"
-	"inv_icon"					"gfx/guis/hud/icons/item_rocket.tga"
-	"inv_name"					"#str_107409"	
+	"inv_icon"					"gfx/guis/hud/icons/blueshell.tga"
+	"inv_name"					"Blue Shell"	
 
 	"fireRate"					".8"
 	"reloadRate"				".8"
@@ -97,6 +97,10 @@ entityDef weapon_rocketlauncher
 
 	"recoilTime"				"500"
 	"recoilAngles"				"-.20 0 0"
+
+	"lockRange"				"10000"
+	"lockSlowdown"			".25"
+	"lockAccelTime"			".5"
 	
 	"mtr_flashShader"			"lights/muzzleflash"
 	"flashColor"				"0.99 0.84 .31"
@@ -320,7 +324,7 @@ entityDef weaponmod_rocketlauncher_homing
 
 entityDef projectile_rocket
 {
-	"spawnclass"				"idProjectile"
+	"spawnclass"				"idGuidedProjectile"
 	"size"						"7 7 7"
 	"cone"						"2"
 	"noshadows"					"1"
@@ -331,8 +335,11 @@ entityDef projectile_rocket
 	"def_splash_damage"			"damage_rocketSplash"
 																											
 	"speed"						"900"
-	"fuse"						"6"
+	"fuse"						"200"
 	"push"						"48000"
+
+	"turn_max"					"2000"
+	"clamp_dist"				"10000"
 	
 							
 	"detonate_on_fuse"			"1"
@@ -369,7 +376,7 @@ entityDef projectile_rocket_mp
 {
 	"inherit"					"projectile_rocket"
 	"predictTime"				"50"
-	"speed"						"935"
+	"speed"						"400"
 	"size"						"5 5 5"
 	"no_impact_prediction"		"1"
 }
@@ -381,7 +388,7 @@ entityDef projectile_rocket_homing
 	"spawnclass"				"idGuidedProjectile"
 	"random"					"450 450 450"
 		
-	"turn_max"					"360"
+	"turn_max"					"2000"
 	"clamp_dist"				"10000"
 }
 
