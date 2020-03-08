@@ -595,13 +595,15 @@ bool idItem::GiveToPlayer( idPlayer *player ) {
 	// Handle the special ammo pickup that gives ammo for the weapon the player currently has
 	if ( spawnArgs.GetBool( "item_currentWeaponAmmo" ) ) {
 		int randAmmo = rand() % 11 + 1;
-		const char *ammoName = player->weapon->GetAmmoNameForIndex(randAmmo);
-		if ( player->weapon->TotalAmmoCount() != player->weapon->maxAmmo && player->weapon->AmmoRequired() ) {
-			player->GiveItem(ammoName);
-			player->GiveInventoryItem( &spawnArgs );
-			return true;
+		const char *ammoName = player->weapon->GetAmmoNameForIndex(randAmmo); //give a random ammo for any weapon
+		for (int i = 1; i < MAX_AMMOTYPES; i++) {
+			if (player->inventory.ammo[i] > 0) { //if the player has any ammo for any gun
+				return false;
+			}
 		}
-		return false;
+		player->GiveItem(ammoName);
+		player->GiveInventoryItem( &spawnArgs );
+		return true;
 	} 
 
 	return player->GiveItem( this );
