@@ -438,6 +438,7 @@ public:
 
 	float					velocityForAcceleration = 0.0f;
 	bool					isBoosting = false;
+	int						starMode = 0;
 
 	// save games
 	void					Save( idSaveGame *savefile ) const;					// archives object for save game file

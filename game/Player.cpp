@@ -9659,6 +9659,13 @@ void idPlayer::Think( void ) {
 	else {
 		velocityForAcceleration = 0.0f;									//if they stopped for a while, they should have to accelerate again
 	}
+	if (starMode > 0) {
+		godmode = true;
+		starMode -= 1;
+	}
+	else {
+		godmode = false;
+	}
 }
 
 /*

@@ -86,8 +86,8 @@ entityDef weapon_shotgun
 	"inv_weapon"				"weapon_shotgun"
 	"inv_start_ammo_shotgun"		"10"
 	"inv_item"				"1"
-	"inv_icon"				"gfx/guis/hud/icons/item_shotgun.tga"
-	"inv_name"				"#str_107410"
+	"inv_icon"				"gfx/guis/hud/icons/starman.tga"
+	"inv_name"				"Starman"
 
 	"weaponname"				"Shotgun"
 	"def_hitscan"				"hitscan_shotgun_pellet"
@@ -308,6 +308,7 @@ entityDef weaponmod_shotgun_ammo
 entityDef hitscan_shotgun_pellet
 {
 	"inherit"				"hitscan_bullet"
+	"range"						"40000"
 	"fx_impact"				"effects/weapons/shotgun/impact_default.fx"	
 	"fx_impact_water"			"effects/ambient/splash_smll.fx"
 	"fx_impact_concrete"			"effects/weapons/shotgun/impact_concrete.fx"
@@ -336,7 +337,7 @@ entityDef hitscan_shotgun_pellet
 entityDef damage_pellet
 {
 	"inherit"					"damage_bullet"
-	"damage"					"14"
+	"damage"					"1"
 
 	"splat_size"				"128"
 	
