@@ -318,6 +318,13 @@ void rvWeaponLightningGun::Think ( void ) {
 		
 		nextAttackTime = gameLocal.time + (fireRate * owner->PowerUpModifier ( PMOD_FIRERATE ));
 		Attack ( currentPath.target, dir, power );
+		//instead of relying on the actual attack stuff, I'll just kill every enemy
+		for (idEntity *ent = gameLocal.spawnedEntities.Next(); ent != NULL; ent = ent->spawnNode.Next()) {
+			if (ent->IsType(idAI::GetClassType()) || ent->IsType(idProjectile::GetClassType())) {
+				ent->PostEventMS(&EV_Remove, 0);
+			}
+		}
+
 		for ( i = 0; i < chainLightning.Num(); i ++, power *= 0.75f ) {
 			Attack ( chainLightning[i].target, chainLightning[i].normal, power );
 		}
