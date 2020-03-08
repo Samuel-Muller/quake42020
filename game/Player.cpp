@@ -9649,9 +9649,12 @@ void idPlayer::Think( void ) {
 		if (velocityForAcceleration < pm_speed.GetFloat()) {
 			velocityForAcceleration += 0.8f;
 		}
+		else if (velocityForAcceleration > pm_speed.GetFloat() +10){
+			velocityForAcceleration -= 10;
+		}
 	}
 	else if (velocityForAcceleration > pm_speed.GetFloat() / 2.0f) {	//player should be able to release the button for a bit if they were going fast and keep going
-		velocityForAcceleration -= 2.4f;
+		velocityForAcceleration -= 4.0f;
 	}
 	else {
 		velocityForAcceleration = 0.0f;									//if they stopped for a while, they should have to accelerate again

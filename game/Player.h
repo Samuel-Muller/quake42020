@@ -304,6 +304,8 @@ public:
 	int						lastHitTime;			// last time projectile fired by player hit target
 	int						lastSavingThrowTime;	// for the "free miss" effect
 
+
+
 	struct playerFlags_s {
 		bool		forward			:1;
 		bool		backward		:1;
@@ -433,6 +435,9 @@ public:
 
 	void					Spawn( void );
 	void					Think( void );
+
+	float					velocityForAcceleration = 0.0f;
+	bool					isBoosting = false;
 
 	// save games
 	void					Save( idSaveGame *savefile ) const;					// archives object for save game file
@@ -1005,7 +1010,6 @@ private:
 
 	const idDeclEntityDef*	itemCosts;
 
-	float					velocityForAcceleration = 0.0f;
 
 
 
