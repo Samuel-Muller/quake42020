@@ -78,8 +78,8 @@ entityDef weapon_lightninggun
 	"inv_weapon"						"weapon_lightninggun"
 	"inv_start_ammo_lightninggun"		"100"
 	"inv_item"							"1"
-	"inv_icon"							"gfx/guis/hud/icons/item_lightning.tga"
-	"inv_name"							"#str_107405"
+	"inv_icon"							"gfx/guis/hud/icons/lightning.tga"
+	"inv_name"							"Lightning"
 
 	"mtr_crosshair"				"gfx/guis/crosshairs/crosshair_lightninggun"
 	"ammoType"					"ammo_lightninggun"
@@ -266,8 +266,8 @@ model weapon_lightninggun_world
 
 entityDef hitscan_lightninggun
 {
-	"range"						"10000"
-	"push"						"10000"
+	"range"						"1"
+	"push"						"1"
 	
 	"def_damage"				"damage_lightninggun"
 	
@@ -292,8 +292,8 @@ entityDef hitscan_lightninggun_mp
 
 entityDef damage_lightninggun
 {
-	"damage"					"11"
-//	"knockback"					"10"
+	"damage"					"1"
+//	"knockback"					"1"
 	"gib"						"1"
 
 	"filter_electricity"		"1"						// can damage all entities with their damage_filter set to "electricity"
