@@ -94,11 +94,11 @@ entityDef weapon_blaster
 
 	"inv_weapon"				"weapon_blaster"
 	"inv_item"					"5"
-	"inv_icon"					"gfx/guis/hud/icons/item_blaster.tga"
-	"inv_name"					"green shell"
+	"inv_icon"					"gfx/guis/hud/icons/none.tga"
+	"inv_name"					"empty"
 
 //	"gui"						"guis/weapons/blaster_ammo.gui"
-	"mtr_icon"					"gfx/guis/hud/icons/gun_blaster"
+	"mtr_icon"					"gfx/guis/hud/icons/gun_blaster" //
 
 	"mtr_crosshair"				"gfx/guis/crosshairs/crosshair_blaster"
 //	"crosshairOffsetX"			"2"

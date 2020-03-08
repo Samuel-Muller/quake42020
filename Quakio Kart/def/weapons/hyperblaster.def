@@ -84,8 +84,8 @@ entityDef weapon_hyperblaster
 
 	"inv_weapon"				"weapon_hyperblaster"
 	"inv_item"					"1"
-	"inv_icon"					"gfx/guis/hud/icons/item_hyperblaster.tga"
-	"inv_name"					"#str_107404"	
+	"inv_icon"					"gfx/guis/hud/icons/greenshell.tga"
+	"inv_name"					"Green Shell"	
 
 	"weaponname"				"HyperBlaster"
 	"ammoType"					"ammo_hyperblaster"
@@ -271,11 +271,7 @@ entityDef weaponmod_hyperblaster_bounce2
 entityDef damage_hyperblaster
 {
 	"inherit"					"damage_blaster"
-	"damage"					"14"
-
-	"deathPush"					"100"
-	"deathPushMin"				"3000 350"
-	"deathPushMax"				"5000 500"
+	
 }
 
 entityDef damage_hyperblaster_mp
@@ -306,34 +302,6 @@ entityDef damage_hyperblaster_splash_mp
 entityDef projectile_hyperblaster
 {
 	"inherit"					"projectile_blaster"
-
-	"size"						"3 3 3"
-	"cone"						"2"
-	"clipmask_largeshot"		"0"
-	"def_damage"				"damage_hyperblaster"
-	
-	"speed"						"1800"
-	"orient_towards_motion"		"1"
-
-	"fx_impact"			"effects/weapons/hyperblaster/impact_default.fx"
-	"fx_fly"			"effects/weapons/hyperblaster/fly.fx"
-	"fx_impact_concrete"		"effects/weapons/hyperblaster/impact_concrete.fx"
-	"fx_impact_rock"		"effects/weapons/hyperblaster/impact_concrete.fx"
-	"fx_impact_glass"		"effects/weapons/hyperblaster/impact_glass.fx"					
-	"fx_impact_bpglass"		"effects/weapons/hyperblaster/impact_bpglass.fx"
-	"fx_impact_electronics"		"effects/weapons/hyperblaster/impact_electronics.fx"	
-	"fx_impact_flesh"		"effects/weapons/hyperblaster/impact_flesh.fx"
-	"fx_impact_monstermetal"	"effects/weapons/hyperblaster/impact_flesh.fx"	
-	"fx_trail"			""
-	"fx_impact_mp"			"effects/weapons/hyperblaster/impact_default_mp.fx"
-	"fx_impact_concrete_mp"		"effects/weapons/hyperblaster/impact_default_mp.fx"
-	"fx_impact_rock_mp"		"effects/weapons/hyperblaster/impact_default_mp.fx"
-	"fx_impact_glass_mp"		"effects/weapons/hyperblaster/impact_default_mp.fx"
-	"fx_impact_bpglass_mp"		"effects/weapons/hyperblaster/impact_default_mp.fx"
-	"fx_impact_electronics_mp"	"effects/weapons/hyperblaster/impact_default_mp.fx"
-	
-	"fx_teleport_enter"		"effects/mp/item_teleport.fx"
-	"fx_teleport"			"effects/mp/item_teleport.fx"
 }
 
 entityDef projectile_hyperblaster_mp
