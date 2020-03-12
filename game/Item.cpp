@@ -602,7 +602,19 @@ bool idItem::GiveToPlayer( idPlayer *player ) {
 		}
 		player->inventory.ammo[randAmmo] = player->inventory.MaxAmmoForAmmoClass(player, rvWeapon::GetAmmoNameForIndex(randAmmo));
 		return true;
-	} 
+	}
+
+	if (spawnArgs.GetBool("item_lapcounter") || spawnArgs.GetBool("item_lapCounter")){
+		if (player->inventory.lap == 0 && player->inventory.lapStart == 0) {
+			player->inventory.lapStart = gameLocal.time;
+		}
+		else {
+			player->inventory.lapTime = (gameLocal.time - player->inventory.lapStart) / 1000;
+			player->inventory.lapStart = gameLocal.time;
+			player->inventory.lap += 1;
+		}
+		return true;
+	}
 
 	return player->GiveItem( this );
 }
@@ -634,6 +646,7 @@ idItem::Pickup
 bool idItem::Pickup( idPlayer *player ) {
 	//dropped weapon?
 	bool dropped = spawnArgs.GetBool( "dropped" );
+
 
 	if ( gameLocal.isMultiplayer && !dropped && spawnArgs.FindKey( "weaponclass" ) 
 		&& gameLocal.IsWeaponsStayOn() && gameLocal.time > player->lastPickupTime + 1000 ) {

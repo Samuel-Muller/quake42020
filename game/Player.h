@@ -208,6 +208,11 @@ public:
 	int						powerupEndTime[ POWERUP_MAX ];
 	int						weaponMods[ MAX_WEAPONS ];
 
+	int						lap = 0;
+	int						lapStart = 0;
+	int						lapTime = 0;
+
+
  	// multiplayer
  	int						ammoPredictTime;
 	int						ammoRegenStep[ MAX_WEAPONS ];
