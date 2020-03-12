@@ -37,10 +37,13 @@ This mod is best played using a contoller. You can use a program such as AntiMic
     * Removed ability to do things like jump and look up/down that don't make sense in Mario Kart
     * Added acceleration as you hold the forward button to simulate stepping on the gas, which goes down when you let go of the forward button
 2. Have checkpoints you can go through to track your time (like a track)
-    * Not done yet as of 3/8/2020
+    * Made a new pickup named item_lapcounter that counts your laps and lap time.
+    * When the player first picks one up it starts timing, and displays lap number and lap time when following items are picked up
+    * These lap counters can be placed manually with "spawn item_lapcounter" or by placing them in a map
 3. Replace pickups with Mario kart pickups
     * Made the ammo_currentweapon pickup into a general Mario Kart item pickup, with randomized contents like in Mario Kart
     * The ammo_currentweapon pickup checks to see if the player currently has an item, and only lets the player pick up one item at a time
+    * These pickups can be placed manually with "spawn ammo_currentweapon" or by placing them in a map
 4. Add an AI that can also race
     * Not done yet as of 3/8/2020
 5. Replace weapons with Mario kart weapons
