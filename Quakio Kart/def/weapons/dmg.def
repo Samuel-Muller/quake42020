@@ -291,7 +291,7 @@ entityDef projectile_dmg
 	"def_splash_damage"			"damage_bullet"
 																											
 	"health"					"0"
-	"speed"						"700"
+	"speed"						"300"
 	"gravity"					"0"
 	"fuse"						"200"
 	"bounce"					"1"
