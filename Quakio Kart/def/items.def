@@ -141,6 +141,24 @@ entityDef item_health
 	"editor_ignore"			"1"
 }
 
+entityDef item_lapCounter
+{
+	"inherit"				"item_default"
+	"editor_color"			".3 .3 1"
+	"editor_mins"			"-10 -10 0"
+	"editor_maxs"			"10 10 16"
+	"spawnclass"			"idItem"
+	"model" 				"models/mapobjects/strogg/terminal/teleporter/teleportpost.lwo"
+	"mins"					"-10 -10 0"
+	"maxs"					"10 10 16"
+	"inv_item"				"2"
+	"inv_icon"				"gfx/guis/hud/icons/lap.tga"
+	"editor_copy100"		"inv_item"
+	"respawn"				"35"
+	"editor_ignore"			"1"
+	"item_lapcounter"		"1"
+}
+
 entityDef item_health_shard
 {
 	"inherit"				"item_health"
