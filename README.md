@@ -45,7 +45,7 @@ This mod is best played using a contoller. You can use a program such as AntiMic
     * The ammo_currentweapon pickup checks to see if the player currently has an item, and only lets the player pick up one item at a time
     * These pickups can be placed manually with "spawn ammo_currentweapon" or by placing them in a map
 4. Add an AI that can also race
-    * Not done yet as of 3/8/2020
+    * Modified the Berserker AI to do nothing but chase the player, so you can race against it
 5. Replace weapons with Mario kart weapons
     * Blaster -> empty hand: fires blanks and acts as a placeholder when the player has no items
     * Machine gun -> banana: shoots a banana that sits on the ground and damages enemies that run into it
